@@ -18,126 +18,165 @@ const Servers = () => {
         </div>
       </section>
 
+      {/* Server Status */}
+      <section className="py-12 bg-black/95">
+        <div className="container mx-auto px-4">
+          <div className="glass-panel p-8 max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6 glow-text text-center">Server Status</h2>
+            
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <div className="w-3 h-3 rounded-full bg-red-500 mr-3"></div>
+                  <span className="text-white">LuxAttack 1</span>
+                </div>
+                <span className="text-red-400">Offline</span>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <div className="w-3 h-3 rounded-full bg-red-500 mr-3"></div>
+                  <span className="text-white">LuxAttack 2</span>
+                </div>
+                <span className="text-red-400">Offline</span>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <div className="w-3 h-3 rounded-full bg-yellow-500 mr-3"></div>
+                  <span className="text-white">Lux-MC Economy</span>
+                </div>
+                <span className="text-yellow-400">Start am 11. Juli 2025</span>
+              </div>
+              
+              <div className="mt-6 text-center text-gray-400 text-sm">
+                IP-Adresse wird bald veröffentlicht
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Server Cards */}
-      <section className="py-20 bg-black/95">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Survival Server */}
+            {/* LuxAttack 1 Server */}
             <Card className="glass-panel overflow-hidden border-white/10">
-              <div className="h-48 bg-[url('https://images.unsplash.com/photo-1623937228271-992646fb0fba?ixlib=rb-4.0.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center"></div>
+              <div className="h-48 bg-[url('/lovable-uploads/4a6ca49e-3dde-43ba-81af-b474ef75de50.png')] bg-cover bg-center"></div>
               <CardHeader>
-                <CardTitle className="glow-text">Survival Server</CardTitle>
+                <CardTitle className="glow-text">LuxAttack 1</CardTitle>
                 <CardDescription className="text-gray-400">
-                  IP: survival.example.com
+                  PVP-Server
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 mb-4">
-                  Unser Hauptserver mit einer großen offenen Welt. Baue, erkunde und überlebe 
-                  zusammen mit anderen Spielern in einer freundlichen Umgebung.
+                  Unser PVP-orientierter Server mit actiongeladenen Kämpfen, speziellen Arenen 
+                  und einzigartigen Spielmodi.
                 </p>
                 <div className="space-y-2 text-sm text-gray-400">
                   <div className="flex justify-between">
+                    <span>Status:</span>
+                    <span className="text-red-400">Offline</span>
+                  </div>
+                  <div className="flex justify-between">
                     <span>Version:</span>
                     <span>1.20.1</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Spielmodus:</span>
+                    <span>PVP</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Maps:</span>
+                    <span>5+</span>
+                  </div>
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full bg-white/10 backdrop-blur hover:bg-white/20" disabled>
+                  <span className="glow-text">Bald verfügbar</span>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* LuxAttack 2 Server */}
+            <Card className="glass-panel overflow-hidden border-white/10">
+              <div className="h-48 bg-[url('/lovable-uploads/fc452eb0-cc38-43fa-8699-aff5c4f6349a.png')] bg-cover bg-center"></div>
+              <CardHeader>
+                <CardTitle className="glow-text">LuxAttack 2</CardTitle>
+                <CardDescription className="text-gray-400">
+                  Mini-Games Server
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 mb-4">
+                  Eine Sammlung von spannenden Minispielen für Einzelspieler und Teams.
+                  Viel Abwechslung und Spaß garantiert!
+                </p>
+                <div className="space-y-2 text-sm text-gray-400">
+                  <div className="flex justify-between">
+                    <span>Status:</span>
+                    <span className="text-red-400">Offline</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Version:</span>
+                    <span>1.20.1</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Spielmodi:</span>
+                    <span>8+</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Spieleranzahl:</span>
+                    <span>2-16</span>
+                  </div>
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full bg-white/10 backdrop-blur hover:bg-white/20" disabled>
+                  <span className="glow-text">Bald verfügbar</span>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Lux-MC Economy Server */}
+            <Card className="glass-panel overflow-hidden border-white/10">
+              <div className="h-48 bg-[url('/lovable-uploads/723019e5-16c9-4269-af96-62d1ef70fb9e.png')] bg-cover bg-center"></div>
+              <CardHeader>
+                <CardTitle className="glow-text">Lux-MC Economy</CardTitle>
+                <CardDescription className="text-gray-400">
+                  Wirtschafts-Survival
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 mb-4">
+                  Ein durchdachtes Wirtschaftssystem in einer Survival-Umgebung. Baue, handle, werde reich
+                  und erschaffe dein eigenes Imperium!
+                </p>
+                <div className="space-y-2 text-sm text-gray-400">
+                  <div className="flex justify-between">
+                    <span>Status:</span>
+                    <span className="text-yellow-400">Start am 11. Juli 2025</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Version:</span>
+                    <span>1.20.4</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Spielmodus:</span>
                     <span>Survival</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Schwierigkeit:</span>
-                    <span>Normal</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Plugins:</span>
-                    <span>20+</span>
+                    <span>Wirtschafts-Plugins:</span>
+                    <span>10+</span>
                   </div>
                 </div>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-white/10 backdrop-blur hover:bg-white/20">
-                  <span className="glow-text">Server beitreten</span>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            {/* Creative Server */}
-            <Card className="glass-panel overflow-hidden border-white/10">
-              <div className="h-48 bg-[url('https://images.unsplash.com/photo-1631116617822-e100bd7e6e06?ixlib=rb-4.0.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center"></div>
-              <CardHeader>
-                <CardTitle className="glow-text">Creative Server</CardTitle>
-                <CardDescription className="text-gray-400">
-                  IP: creative.example.com
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 mb-4">
-                  Ein Ort für Baumeister und kreative Köpfe. Hier kannst du ohne Einschränkungen 
-                  bauen und deine kreative Vision verwirklichen.
-                </p>
-                <div className="space-y-2 text-sm text-gray-400">
-                  <div className="flex justify-between">
-                    <span>Version:</span>
-                    <span>1.20.1</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Spielmodus:</span>
-                    <span>Creative</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>WorldEdit:</span>
-                    <span>Aktiviert</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Plot-System:</span>
-                    <span>Ja</span>
-                  </div>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full bg-white/10 backdrop-blur hover:bg-white/20">
-                  <span className="glow-text">Server beitreten</span>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            {/* Minigames Server */}
-            <Card className="glass-panel overflow-hidden border-white/10">
-              <div className="h-48 bg-[url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center"></div>
-              <CardHeader>
-                <CardTitle className="glow-text">Minigames Server</CardTitle>
-                <CardDescription className="text-gray-400">
-                  IP: games.example.com
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 mb-4">
-                  Spiele eine Vielzahl von unterhaltsamen Minispielen mit Freunden und anderen 
-                  Community-Mitgliedern. Von PvP bis zu kooperativen Spielen.
-                </p>
-                <div className="space-y-2 text-sm text-gray-400">
-                  <div className="flex justify-between">
-                    <span>Version:</span>
-                    <span>1.19.2</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Spielmodi:</span>
-                    <span>Diverse</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Spieler pro Spiel:</span>
-                    <span>2-16</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Eigene Maps:</span>
-                    <span>12+</span>
-                  </div>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full bg-white/10 backdrop-blur hover:bg-white/20">
-                  <span className="glow-text">Server beitreten</span>
+                <Button className="w-full bg-white/10 backdrop-blur hover:bg-white/20" disabled>
+                  <span className="glow-text">Bald verfügbar</span>
                 </Button>
               </CardFooter>
             </Card>
@@ -146,7 +185,7 @@ const Servers = () => {
       </section>
 
       {/* Server Rules */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-black/95">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-bold mb-10 glow-text text-center">Server-Regeln</h2>
           <div className="glass-panel p-8">

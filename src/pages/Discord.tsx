@@ -49,18 +49,25 @@ const Discord = () => {
                     <span>An regelmäßigen Discord-Events teilnehmen</span>
                   </li>
                 </ul>
-                <Button size="lg" className="bg-[#5865F2] hover:bg-[#4752c4] text-white">
-                  <ExternalLink className="mr-2 h-5 w-5" />
-                  Discord beitreten
-                </Button>
+                <a href="https://discord.gg/vwm5Mv93Ye" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-[#5865F2] hover:bg-[#4752c4] text-white">
+                    <ExternalLink className="mr-2 h-5 w-5" />
+                    Discord beitreten
+                  </Button>
+                </a>
               </div>
               
               <div className="flex-1 bg-[#36393f] rounded-lg h-96 flex items-center justify-center">
-                {/* Dies würde normalerweise ein eingebettetes Discord Widget sein */}
-                <div className="text-center">
-                  <p className="text-white mb-2">Discord Widget</p>
+                <div className="text-center p-6">
+                  <h3 className="text-white text-lg font-semibold mb-2">LuxAttack Discord</h3>
+                  <p className="text-gray-300 mb-6">https://discord.gg/vwm5Mv93Ye</p>
+                  <img 
+                    src="/lovable-uploads/2138cf7d-4b05-4fc8-982d-3b4b4210c0a3.png" 
+                    alt="LuxAttack Logo" 
+                    className="h-24 mx-auto mb-6" 
+                  />
                   <p className="text-gray-400 text-sm">
-                    (Hier würde das eingebettete Discord-Widget angezeigt werden)
+                    Tritt unserem Discord bei, um mit der Community in Kontakt zu treten!
                   </p>
                 </div>
               </div>
@@ -69,77 +76,116 @@ const Discord = () => {
         </div>
       </section>
 
-      {/* Discord Features */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 glow-text text-center">Discord Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="glass-panel p-6">
-              <h3 className="text-xl font-bold mb-4 glow-text">Spezialisierte Kanäle</h3>
-              <p className="text-gray-300">
-                Eigene Kanäle für verschiedene Server, Build-Showcases, Support und mehr.
-              </p>
-            </div>
-            
-            {/* Feature 2 */}
-            <div className="glass-panel p-6">
-              <h3 className="text-xl font-bold mb-4 glow-text">Server-Integration</h3>
-              <p className="text-gray-300">
-                Sehe, wer online ist und kommuniziere mit Spielern auf dem Server direkt über Discord.
-              </p>
-            </div>
-            
-            {/* Feature 3 */}
-            <div className="glass-panel p-6">
-              <h3 className="text-xl font-bold mb-4 glow-text">Musik-Bot</h3>
-              <p className="text-gray-300">
-                Höre Musik in den Voice-Channels während du mit deinen Freunden spielst.
-              </p>
-            </div>
-            
-            {/* Feature 4 */}
-            <div className="glass-panel p-6">
-              <h3 className="text-xl font-bold mb-4 glow-text">Event-Ankündigungen</h3>
-              <p className="text-gray-300">
-                Verpasse keine Events mehr dank automatischer Benachrichtigungen.
-              </p>
-            </div>
-            
-            {/* Feature 5 */}
-            <div className="glass-panel p-6">
-              <h3 className="text-xl font-bold mb-4 glow-text">Support-Tickets</h3>
-              <p className="text-gray-300">
-                Erstelle private Support-Tickets für Hilfe bei Problemen oder Fragen.
-              </p>
-            </div>
-            
-            {/* Feature 6 */}
-            <div className="glass-panel p-6">
-              <h3 className="text-xl font-bold mb-4 glow-text">Rollen-System</h3>
-              <p className="text-gray-300">
-                Verdiene dir Rollen basierend auf deiner Aktivität und deinem Beitrag zur Community.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Discord Rules */}
-      <section className="py-20 bg-black/95">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-bold mb-10 glow-text text-center">Discord-Regeln</h2>
           <div className="glass-panel p-8">
-            <ol className="list-decimal list-inside space-y-4 text-gray-300 pl-4">
-              <li>Respektiere alle Mitglieder. Keine Beleidigungen oder Belästigungen.</li>
-              <li>Keine NSFW-Inhalte. Halte den Server familienfreundlich.</li>
-              <li>Kein Spam oder übermäßiges Senden von Nachrichten.</li>
-              <li>Keine Werbung für andere Server ohne Erlaubnis.</li>
-              <li>Verwende die richtigen Kanäle für deine Nachrichten.</li>
-              <li>Keine politischen oder kontroversen Diskussionen.</li>
-              <li>Befolge die Anweisungen der Moderatoren.</li>
-              <li>Melde unangemessenes Verhalten an die Moderatoren.</li>
-            </ol>
+            <h3 className="text-2xl font-bold mb-6 glow-text text-center">📜 LuxAttack Regeln</h3>
+            
+            <p className="mb-6 text-center text-gray-300">
+              Diese Regeln gelten für den Discord wie auch für unseren Minecraft Server.
+            </p>
+            
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-xl font-semibold mb-2 text-white">§1 Allgemeines Verhalten</h4>
+                <ul className="space-y-2 text-gray-300 pl-4">
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Seid respektvoll im Umgang miteinander. Unpassende oder kopierte Namen sind verboten und werden bestraft.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Diskriminierung, Beleidigungen, Rassismus oder toxisches Verhalten sind verboten.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Inhalte mit Gewalt, NSFW oder anderen unangemessenen Themen sind untersagt.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-xl font-semibold mb-2 text-white">§2 Spam & Pings</h4>
+                <ul className="space-y-2 text-gray-300 pl-4">
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Spam jeder Art (z. B. Nachrichten, Emojis, CAPS) ist verboten.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Admins und Mods dürfen nicht grundlos gepingt werden.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-xl font-semibold mb-2 text-white">§3 Links & Werbung</h4>
+                <ul className="space-y-2 text-gray-300 pl-4">
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Das Posten von Links ist nur in #⁠links erlaubt.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Fremdwerbung ist ohne ausdrückliche Erlaubnis verboten.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-xl font-semibold mb-2 text-white">§4 Channelnutzung</h4>
+                <ul className="space-y-2 text-gray-300 pl-4">
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Nutze die Kanäle nur entsprechend ihres Zwecks.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Unpassende Inhalte im falschen Channel werden gelöscht.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-xl font-semibold mb-2 text-white">§5 Datenschutz & Sicherheit</h4>
+                <ul className="space-y-2 text-gray-300 pl-4">
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Gebt keine persönlichen Daten weiter – weder eure noch die von anderen.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Private Nachrichten mit Belästigung oder Scams sind sofort zu melden.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-xl font-semibold mb-2 text-white">§6 Verantwortung & Team</h4>
+                <ul className="space-y-2 text-gray-300 pl-4">
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Jeder ist für seinen Account selbst verantwortlich.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Den Anweisungen des Teams ist Folge zu leisten.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-500 mr-2">»</span>
+                    <span>Das Team behält sich das Recht vor, User zu verwarnen oder zu bannen.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="mt-8 text-center text-gray-400">
+              <p>Zusätzlich gelten die offiziellen Discord Guidelines sowie die Discord Terms of Service.</p>
+              <p className="mt-4 text-sm">Regelwerk kann jederzeit angepasst werden – Letzter Stand: 25. April 2025</p>
+              <p className="mt-4 text-xs">© 2023-2025 LuxAttack</p>
+            </div>
           </div>
         </div>
       </section>
