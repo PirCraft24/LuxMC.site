@@ -22,7 +22,8 @@ const About = () => {
     { 
       name: "JoeLux353", 
       role: "Team Mitglied", 
-      description: "Kümmert sich um die Community und hilft bei der Entwicklung neuer Server-Features."
+      description: "Builder auf dem Server der Spawns. Bringt viele neue Ideen.",
+      avatar: "/lovable-uploads/bb005357-26c6-4746-8172-87a40d61ad07.png"
     },
     { 
       name: "SenseiJules", 
