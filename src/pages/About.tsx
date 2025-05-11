@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Sparkles } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const About = () => {
   // Team Mitglieder (basierend auf den bereitgestellten Informationen)
@@ -9,12 +10,14 @@ const About = () => {
     { 
       name: "PirCraft", 
       role: "CEO", 
-      description: "Leiter des Projekts, der ständig daran arbeitet, neue Ideen umzusetzen und spannende Spielmodi zu entwickeln."
+      description: "Leiter des Projekts, der ständig daran arbeitet, neue Ideen umzusetzen und spannende Spielmodi zu entwickeln.",
+      avatar: "/lovable-uploads/30361288-6d11-4905-838a-47881a0921fe.png"
     },
     { 
       name: "Crafter1566", 
       role: "Team Mitglied", 
-      description: "Unterstützt das Team mit innovativen Ideen und Konzepten für unsere Minecraft-Server."
+      description: "Kümmert sich vor allem um das Wohlbefinden der Spieler auf dem Minecraft Server",
+      avatar: "/lovable-uploads/69c4b240-bdf7-49ce-9dc4-b494a74c83fd.png"
     },
     { 
       name: "JoeLux353", 
@@ -53,11 +56,6 @@ const About = () => {
                 Willkommen bei LuxMC – deiner kreativen Minecraft-Welt! Seit 2024 entwickeln wir 
                 mit einem kleinen, engagierten Team einzigartige Serverkonzepte mit viel Herzblut und Ideenreichtum.
               </p>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Ob actiongeladene PvP-Schlachten oder wirtschaftlich durchdachte Survival-Welten – bei uns 
-                steht der Spielspaß an erster Stelle. Unsere Community ist freundlich, hilfsbereit und 
-                immer offen für neue Spieler.
-              </p>
               <p className="text-gray-300 leading-relaxed">
                 LuxMC steht für Qualität, Kreativität und eine starke Gemeinschaft. 
                 Tauch ein in unsere Welt – gemeinsam bauen wir das nächste große Abenteuer!
@@ -75,8 +73,15 @@ const About = () => {
             {team.map((member, index) => (
               <Card key={index} className="bg-black/80 border border-white/10">
                 <CardContent className="p-6">
-                  <div className="w-20 h-20 rounded-full bg-accent/20 mx-auto mb-4 flex items-center justify-center">
-                    <span className="glow-text text-2xl">{member.name.charAt(0)}</span>
+                  <div className="w-20 h-20 rounded-full bg-accent/20 mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                    {member.avatar ? (
+                      <Avatar className="w-20 h-20">
+                        <AvatarImage src={member.avatar} alt={member.name} className="object-cover" />
+                        <AvatarFallback className="text-2xl glow-text">{member.name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                    ) : (
+                      <span className="glow-text text-2xl">{member.name.charAt(0)}</span>
+                    )}
                   </div>
                   <h3 className="text-xl font-medium mb-1 text-center glow-text">{member.name}</h3>
                   <p className="text-accent text-center mb-4">{member.role}</p>
@@ -177,10 +182,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 glow-text text-center">Impressionen</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <img src="/lovable-uploads/7f885c6e-53f8-4bb1-bd33-57912c486531.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
-            <img src="/lovable-uploads/7f138b44-9269-4282-a232-e4cbc559d145.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
-            <img src="/lovable-uploads/8072d65c-d276-4162-8bc4-7cfae6a3ac35.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
-            <img src="/lovable-uploads/caf3f7da-9e39-493f-b3c6-566b753f5a63.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
+            <img src="/lovable-uploads/7f885c6e-53f8-4bb1-bd33-57912c486531.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
+            <img src="/lovable-uploads/7f138b44-9269-4282-a232-e4cbc559d145.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
+            <img src="/lovable-uploads/8072d65c-d276-4162-8bc4-7cfae6a3ac35.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
+            <img src="/lovable-uploads/caf3f7da-9e39-493f-b3c6-566b753f5a63.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
           </div>
         </div>
       </section>

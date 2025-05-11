@@ -182,10 +182,10 @@ const Servers = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 glow-text text-center">Server Impressionen</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <img src="/lovable-uploads/3b9a358c-978d-448c-bcf9-f9423ecbf123.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
-            <img src="/lovable-uploads/21088e98-dffc-4a09-9444-4de28c805478.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
-            <img src="/lovable-uploads/f05e2558-4559-4e9e-8c77-ec8ca08f2e5b.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
-            <img src="/lovable-uploads/e6f089f2-3c23-4217-8bc5-d2b116ccb2aa.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
+            <img src="/lovable-uploads/3b9a358c-978d-448c-bcf9-f9423ecbf123.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
+            <img src="/lovable-uploads/21088e98-dffc-4a09-9444-4de28c805478.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
+            <img src="/lovable-uploads/f05e2558-4559-4e9e-8c77-ec8ca08f2e5b.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
+            <img src="/lovable-uploads/e6f089f2-3c23-4217-8bc5-d2b116ccb2aa.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
           </div>
         </div>
       </section>

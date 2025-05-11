@@ -110,10 +110,10 @@ const Home = () => {
       <section className="py-12 bg-black">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <img src="/lovable-uploads/cdbbb7a6-fec6-4459-880c-c3a00338535e.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
-            <img src="/lovable-uploads/73971882-5e2f-4bf9-a85b-4296879189c4.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
-            <img src="/lovable-uploads/84b8584b-ae32-447c-ac08-a125892a9842.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
-            <img src="/lovable-uploads/c53e45df-2de1-41bc-a11a-65582190cea5.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
+            <img src="/lovable-uploads/cdbbb7a6-fec6-4459-880c-c3a00338535e.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
+            <img src="/lovable-uploads/73971882-5e2f-4bf9-a85b-4296879189c4.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
+            <img src="/lovable-uploads/84b8584b-ae32-447c-ac08-a125892a9842.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
+            <img src="/lovable-uploads/c53e45df-2de1-41bc-a11a-65582190cea5.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-125" />
           </div>
         </div>
       </section>
