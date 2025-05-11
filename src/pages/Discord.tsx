@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, MessageCircle, Sparkles } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 const Discord = () => {
   return (
@@ -59,11 +60,11 @@ const Discord = () => {
               
               <div className="flex-1 bg-[#36393f] rounded-lg h-96 flex items-center justify-center">
                 <div className="text-center p-6">
-                  <h3 className="text-white text-lg font-semibold mb-2">LuxAttack Discord</h3>
+                  <h3 className="text-white text-lg font-semibold mb-2">LuxMC Discord</h3>
                   <p className="text-gray-300 mb-6">https://discord.gg/vwm5Mv93Ye</p>
                   <img 
-                    src="/lovable-uploads/2138cf7d-4b05-4fc8-982d-3b4b4210c0a3.png" 
-                    alt="LuxAttack Logo" 
+                    src="/lovable-uploads/ecf35f30-076e-41b5-b3d6-2a82e618b65b.png" 
+                    alt="LuxMC Logo" 
                     className="h-24 mx-auto mb-6" 
                   />
                   <p className="text-gray-400 text-sm">
@@ -76,12 +77,69 @@ const Discord = () => {
         </div>
       </section>
 
-      {/* Discord Rules */}
+      {/* Join Team Section */}
       <section className="py-20 bg-black">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold mb-10 glow-text text-center">Wir suchen dich!</h2>
+          <Card className="bg-black/80 border border-white/10 overflow-hidden">
+            <CardContent className="p-8 relative">
+              <div className="absolute top-0 right-0 -mt-4 -mr-4 opacity-30">
+                <Sparkles className="h-32 w-32 text-accent" />
+              </div>
+              <div>
+                <p className="text-gray-300 mb-6 text-center">
+                  LuxMC stellt gerade ein neues Team zusammen – sei dabei!
+                </p>
+                
+                <div className="mb-8">
+                  <h4 className="text-xl font-semibold mb-4 glow-text">Was dich erwartet:</h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Ein freundliches und engagiertes Team</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Spannende Projekte und kreative Freiheit</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Eine aktive Community</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="mb-8">
+                  <h4 className="text-xl font-semibold mb-4 glow-text">Wir suchen aktuell:</h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Entwickler (für Coden, Webseiten usw.)</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-xl font-semibold mb-4 glow-text">So bewirbst du dich:</h4>
+                  <div className="flex items-center">
+                    <MessageCircle className="text-accent mr-2" />
+                    <p className="text-gray-300">
+                      Eröffne ein Ticket auf unserem Discord und sende uns eine Auswahl deiner bisherigen Arbeiten. Wir freuen uns auf dich!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Discord Rules */}
+      <section className="py-20 bg-black/95">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-bold mb-10 glow-text text-center">Discord-Regeln</h2>
           <div className="glass-panel p-8">
-            <h3 className="text-2xl font-bold mb-6 glow-text text-center">📜 LuxAttack Regeln</h3>
+            <h3 className="text-2xl font-bold mb-6 glow-text text-center">📜 LuxMC Regeln</h3>
             
             <p className="mb-6 text-center text-gray-300">
               Diese Regeln gelten für den Discord wie auch für unseren Minecraft Server.
@@ -184,7 +242,7 @@ const Discord = () => {
             <div className="mt-8 text-center text-gray-400">
               <p>Zusätzlich gelten die offiziellen Discord Guidelines sowie die Discord Terms of Service.</p>
               <p className="mt-4 text-sm">Regelwerk kann jederzeit angepasst werden – Letzter Stand: 25. April 2025</p>
-              <p className="mt-4 text-xs">© 2023-2025 LuxAttack</p>
+              <p className="mt-4 text-xs">© 2023-2025 LuxMC</p>
             </div>
           </div>
         </div>

@@ -10,11 +10,11 @@ const Footer = () => {
           <div className="mb-8 md:mb-0">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/2138cf7d-4b05-4fc8-982d-3b4b4210c0a3.png" 
-                alt="LuxAttack Logo" 
+                src="/lovable-uploads/ecf35f30-076e-41b5-b3d6-2a82e618b65b.png" 
+                alt="LuxMC Logo" 
                 className="h-8 mr-2" 
               />
-              <span className="text-xl font-bold glow-text">LuxAttack</span>
+              <span className="text-xl font-bold glow-text">LuxMC</span>
             </Link>
             <p className="mt-2 text-gray-400 max-w-xs">
               Eine freundliche Minecraft-Community für Spieler aller Erfahrungsstufen.
@@ -38,7 +38,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li><Link to="/servers" className="text-gray-400 hover:text-white transition-colors">LuxAttack 1</Link></li>
                 <li><Link to="/servers" className="text-gray-400 hover:text-white transition-colors">LuxAttack 2</Link></li>
-                <li><Link to="/servers" className="text-gray-400 hover:text-white transition-colors">Lux-MC Economy</Link></li>
+                <li><Link to="/servers" className="text-gray-400 hover:text-white transition-colors">LuxMC Economy</Link></li>
                 <li><Link to="/servers" className="text-gray-400 hover:text-white transition-colors">Regeln</Link></li>
               </ul>
             </div>
@@ -54,10 +54,10 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} LuxAttack. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} LuxMC. Alle Rechte vorbehalten.
           </p>
           <div className="mt-4 md:mt-0 text-sm text-gray-500">
-            <span>Minecraft ist eine eingetragene Marke von Mojang AB.</span>
+            <span>Nicht mit Mojang oder Microsoft verbunden.</span>
           </div>
         </div>
       </div>

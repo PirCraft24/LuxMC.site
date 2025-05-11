@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -17,24 +17,28 @@ const Navbar = () => {
         <nav className="flex items-center justify-between">
           <Link to="/" className="glow-text text-xl font-bold flex items-center">
             <img 
-              src="/lovable-uploads/2138cf7d-4b05-4fc8-982d-3b4b4210c0a3.png" 
-              alt="LuxAttack Logo" 
+              src="/lovable-uploads/ecf35f30-076e-41b5-b3d6-2a82e618b65b.png" 
+              alt="LuxMC Logo" 
               className="h-10 mr-2" 
             />
-            <span>LuxAttack</span>
+            <span>LuxMC</span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="glow-text hover:opacity-80 transition-opacity">
+            <Link to="/" className="glow-text hover:opacity-80 transition-opacity flex items-center gap-1">
+              <Sparkles className="h-4 w-4" />
               Home
             </Link>
-            <Link to="/about" className="glow-text hover:opacity-80 transition-opacity">
+            <Link to="/about" className="glow-text hover:opacity-80 transition-opacity flex items-center gap-1">
+              <Sparkles className="h-4 w-4" />
               Über uns
             </Link>
-            <Link to="/servers" className="glow-text hover:opacity-80 transition-opacity">
+            <Link to="/servers" className="glow-text hover:opacity-80 transition-opacity flex items-center gap-1">
+              <Sparkles className="h-4 w-4" />
               Server
             </Link>
-            <Link to="/discord" className="glow-text hover:opacity-80 transition-opacity">
+            <Link to="/discord" className="glow-text hover:opacity-80 transition-opacity flex items-center gap-1">
+              <Sparkles className="h-4 w-4" />
               Discord
             </Link>
             <Button variant="outline" className="border border-white/20 hover:bg-white/10">
@@ -53,30 +57,34 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4">
               <Link 
                 to="/" 
-                className="glow-text hover:opacity-80 transition-opacity py-2"
+                className="glow-text hover:opacity-80 transition-opacity py-2 flex items-center gap-2"
                 onClick={() => setIsMenuOpen(false)}
               >
+                <Sparkles className="h-4 w-4" />
                 Home
               </Link>
               <Link 
                 to="/about" 
-                className="glow-text hover:opacity-80 transition-opacity py-2"
+                className="glow-text hover:opacity-80 transition-opacity py-2 flex items-center gap-2"
                 onClick={() => setIsMenuOpen(false)}
               >
+                <Sparkles className="h-4 w-4" />
                 Über uns
               </Link>
               <Link 
                 to="/servers" 
-                className="glow-text hover:opacity-80 transition-opacity py-2"
+                className="glow-text hover:opacity-80 transition-opacity py-2 flex items-center gap-2"
                 onClick={() => setIsMenuOpen(false)}
               >
+                <Sparkles className="h-4 w-4" />
                 Server
               </Link>
               <Link 
                 to="/discord" 
-                className="glow-text hover:opacity-80 transition-opacity py-2"
+                className="glow-text hover:opacity-80 transition-opacity py-2 flex items-center gap-2"
                 onClick={() => setIsMenuOpen(false)}
               >
+                <Sparkles className="h-4 w-4" />
                 Discord
               </Link>
               <Button variant="outline" className="border border-white/20 hover:bg-white/10 w-full">

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles, Diamond } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -9,25 +9,26 @@ const Home = () => {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/723019e5-16c9-4269-af96-62d1ef70fb9e.png')] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/30c1624d-e93b-4e0d-8a08-a8f3581a716f.png')] bg-cover bg-center opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/80 to-black" />
         
         <div className="container mx-auto px-4 z-10 text-center">
           <img 
-            src="/lovable-uploads/2138cf7d-4b05-4fc8-982d-3b4b4210c0a3.png" 
-            alt="LuxAttack Logo" 
+            src="/lovable-uploads/ecf35f30-076e-41b5-b3d6-2a82e618b65b.png" 
+            alt="LuxMC Logo" 
             className="h-32 mx-auto mb-8" 
           />
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 glow-text tracking-tight">
             Deine Minecraft Welt <br /> wartet auf dich
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-gray-300">
-            Willkommen bei LUX-MC – deiner kreativen Minecraft-Welt! Bei uns steht der Spielspaß an erster Stelle.
+            Willkommen bei LuxMC – deiner kreativen Minecraft-Welt! Bei uns steht der Spielspaß an erster Stelle.
             Unsere Community ist freundlich, hilfsbereit und immer offen für neue Spieler.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Link to="/servers">
               <Button size="lg" className="bg-white/10 backdrop-blur hover:bg-white/20 border border-white/20">
+                <Sparkles className="mr-2 h-4 w-4" />
                 <span className="glow-text">Server entdecken</span>
               </Button>
             </Link>
@@ -48,7 +49,7 @@ const Home = () => {
       <section className="py-24 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center glow-text">
-            Über LUX-MC
+            Über LuxMC
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-12"></div>
           
@@ -65,9 +66,9 @@ const Home = () => {
         </div>
       </section>
       
-      {/* Features Section */}
+      {/* Features Section with New Images */}
       <section className="py-24 bg-black/95 relative">
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/13df85ac-810a-4dc2-933d-c6fa2fd99678.png')] bg-cover bg-center opacity-5"></div>
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/4d577066-6f21-4346-9778-df81a97d8e70.png')] bg-cover bg-center opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center glow-text">
             Unsere Server Features
@@ -77,20 +78,20 @@ const Home = () => {
             {/* Feature 1 */}
             <div className="glass-panel p-6 flex flex-col items-center text-center">
               <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                <span className="glow-text-accent text-2xl">1</span>
+                <span className="glow-text-accent text-2xl"><Diamond className="h-8 w-8" /></span>
               </div>
-              <h3 className="text-xl font-semibold mb-2 glow-text">PVP Schlachten</h3>
+              <h3 className="text-xl font-semibold mb-2 glow-text">Spannende Server</h3>
               <p className="text-gray-400">
-                Spannende und actiongeladene PvP-Erlebnisse auf speziell gestalteten Maps.
+                Von CraftAttack bis zu wirtschaftlichen Survival-Servern - für jeden Spielertyp ist etwas dabei.
               </p>
             </div>
             
             {/* Feature 2 */}
             <div className="glass-panel p-6 flex flex-col items-center text-center">
               <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                <span className="glow-text-accent text-2xl">2</span>
+                <span className="glow-text-accent text-2xl"><Diamond className="h-8 w-8" /></span>
               </div>
-              <h3 className="text-xl font-semibold mb-2 glow-text">Survival Economy</h3>
+              <h3 className="text-xl font-semibold mb-2 glow-text">LuxMC Economy</h3>
               <p className="text-gray-400">
                 Wirtschaftlich durchdachte Survival-Welten mit ausgeklügelten Wirtschaftssystemen.
               </p>
@@ -99,7 +100,7 @@ const Home = () => {
             {/* Feature 3 */}
             <div className="glass-panel p-6 flex flex-col items-center text-center">
               <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                <span className="glow-text-accent text-2xl">3</span>
+                <span className="glow-text-accent text-2xl"><Diamond className="h-8 w-8" /></span>
               </div>
               <h3 className="text-xl font-semibold mb-2 glow-text">Gemeinschaft</h3>
               <p className="text-gray-400">
@@ -109,12 +110,24 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Minecraft Images Grid */}
+      <section className="py-12 bg-black">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <img src="/lovable-uploads/cdbbb7a6-fec6-4459-880c-c3a00338535e.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
+            <img src="/lovable-uploads/73971882-5e2f-4bf9-a85b-4296879189c4.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
+            <img src="/lovable-uploads/84b8584b-ae32-447c-ac08-a125892a9842.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
+            <img src="/lovable-uploads/c53e45df-2de1-41bc-a11a-65582190cea5.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
+          </div>
+        </div>
+      </section>
       
       {/* Join CTA */}
       <section className="py-24 bg-gradient-to-b from-black to-black/90 relative">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 glow-text max-w-4xl mx-auto leading-tight">
-            Bereit, Teil unserer LuxAttack-Community zu werden?
+            Bereit, Teil unserer LuxMC-Community zu werden?
           </h2>
           <p className="text-lg max-w-2xl mx-auto mb-10 text-gray-300">
             Starte noch heute dein Abenteuer. Schließe dich unserem Server an und entdecke

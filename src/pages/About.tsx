@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Sparkles } from 'lucide-react';
 
 const About = () => {
   // Team Mitglieder (basierend auf den bereitgestellten Informationen)
@@ -9,8 +10,22 @@ const About = () => {
       name: "PirCraft", 
       role: "CEO", 
       description: "Leiter des Projekts, der ständig daran arbeitet, neue Ideen umzusetzen und spannende Spielmodi zu entwickeln."
+    },
+    { 
+      name: "Crafter1566", 
+      role: "Team Mitglied", 
+      description: "Unterstützt das Team mit innovativen Ideen und Konzepten für unsere Minecraft-Server."
+    },
+    { 
+      name: "JoeLux353", 
+      role: "Team Mitglied", 
+      description: "Kümmert sich um die Community und hilft bei der Entwicklung neuer Server-Features."
+    },
+    { 
+      name: "SenseiJules", 
+      role: "Team Mitglied", 
+      description: "Experte für Server-Management und Spielerentwicklung im LuxMC-Team."
     }
-    // Weitere Teammitglieder könnten hier hinzugefügt werden
   ];
 
   return (
@@ -22,7 +37,7 @@ const About = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6 glow-text">Über Uns</h1>
           <div className="w-24 h-1 bg-accent mx-auto mb-10"></div>
           <p className="text-xl max-w-3xl mx-auto text-gray-300 leading-relaxed">
-            Lerne das Team hinter LUX-MC kennen und erfahre mehr über unsere Mission, 
+            Lerne das Team hinter LuxMC kennen und erfahre mehr über unsere Mission, 
             ein einzigartiges Minecraft-Erlebnis zu schaffen.
           </p>
         </div>
@@ -35,7 +50,7 @@ const About = () => {
             <h2 className="text-3xl font-bold mb-8 glow-text text-center">Unsere Geschichte</h2>
             <div className="glass-panel p-8">
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Willkommen bei LUX-MC – deiner kreativen Minecraft-Welt! Seit 2024 entwickeln wir 
+                Willkommen bei LuxMC – deiner kreativen Minecraft-Welt! Seit 2024 entwickeln wir 
                 mit einem kleinen, engagierten Team einzigartige Serverkonzepte mit viel Herzblut und Ideenreichtum.
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed">
@@ -56,7 +71,7 @@ const About = () => {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 glow-text text-center">Unser Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {team.map((member, index) => (
               <Card key={index} className="bg-black/80 border border-white/10">
                 <CardContent className="p-6">
@@ -71,15 +86,53 @@ const About = () => {
             ))}
           </div>
           
+          {/* Join Our Team Section */}
           <div className="mt-16 max-w-3xl mx-auto">
-            <Card className="bg-black/80 border border-white/10">
-              <CardContent className="p-6">
+            <Card className="bg-black/80 border border-white/10 overflow-hidden">
+              <CardContent className="p-8 relative">
+                <div className="absolute top-0 right-0 -mt-4 -mr-4">
+                  <Sparkles className="h-24 w-24 text-accent/20" />
+                </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-medium mb-4 glow-text">Werde Teil unseres Teams</h3>
-                  <p className="text-gray-400">
-                    Wir suchen immer nach enthusiastischen und kreativen Köpfen, die unser Team verstärken möchten.
-                    Wenn du Interesse hast, besuche unseren Discord-Server und kontaktiere uns dort.
+                  <h3 className="text-2xl font-bold mb-6 glow-text">Wir suchen dich!</h3>
+                  <p className="text-gray-300 mb-6">
+                    LuxMC stellt gerade ein neues Team zusammen – sei dabei!
                   </p>
+                  
+                  <div className="text-left mb-8">
+                    <h4 className="text-xl font-semibold mb-4 glow-text">Was dich erwartet:</h4>
+                    <ul className="space-y-2 text-gray-300">
+                      <li className="flex items-start">
+                        <span className="text-accent mr-2">•</span>
+                        <span>Ein freundliches und engagiertes Team</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-accent mr-2">•</span>
+                        <span>Spannende Projekte und kreative Freiheit</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-accent mr-2">•</span>
+                        <span>Eine aktive Community</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="text-left mb-8">
+                    <h4 className="text-xl font-semibold mb-4 glow-text">Wir suchen aktuell:</h4>
+                    <ul className="space-y-2 text-gray-300">
+                      <li className="flex items-start">
+                        <span className="text-accent mr-2">•</span>
+                        <span>Entwickler (für Coden, Webseiten usw.)</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="text-left">
+                    <h4 className="text-xl font-semibold mb-4 glow-text">So bewirbst du dich:</h4>
+                    <p className="text-gray-300">
+                      Eröffne ein Ticket auf unserem Discord und sende uns eine Auswahl deiner bisherigen Arbeiten. Wir freuen uns auf dich!
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -111,10 +164,23 @@ const About = () => {
             <div className="glass-panel p-6 text-center">
               <h3 className="text-xl font-semibold mb-4 glow-text">Gemeinschaft</h3>
               <p className="text-gray-400">
-                Eine starke, freundliche Community ist das Herzstück von LUX-MC.
+                Eine starke, freundliche Community ist das Herzstück von LuxMC.
                 Wir schätzen jeden einzelnen Spieler.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Server Images */}
+      <section className="py-12 bg-black">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 glow-text text-center">Impressionen</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <img src="/lovable-uploads/7f885c6e-53f8-4bb1-bd33-57912c486531.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
+            <img src="/lovable-uploads/7f138b44-9269-4282-a232-e4cbc559d145.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
+            <img src="/lovable-uploads/8072d65c-d276-4162-8bc4-7cfae6a3ac35.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
+            <img src="/lovable-uploads/caf3f7da-9e39-493f-b3c6-566b753f5a63.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
           </div>
         </div>
       </section>
