@@ -109,7 +109,7 @@ const Servers = () => {
               <CardContent>
                 <p className="text-gray-300 mb-4">
                   Die verbesserte Version unseres CraftAttack-Servers mit mehr Features und optimierter Performance.
-                  Dieser Server ist jetzt beendet, aber als Download verfügbar!
+                  Dieser Server ist jetzt beendet.
                 </p>
                 <div className="space-y-2 text-sm text-gray-400">
                   <div className="flex justify-between">
@@ -127,12 +127,9 @@ const Servers = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <a href="https://shorturl.at/NP6EQ" target="_blank" rel="noopener noreferrer" className="w-full">
-                  <Button className="w-full bg-white/10 backdrop-blur hover:bg-white/20">
-                    <Download className="mr-2 h-4 w-4" />
-                    <span className="glow-text">Download</span>
-                  </Button>
-                </a>
+                <Button className="w-full bg-white/10 backdrop-blur hover:bg-white/20" disabled>
+                  <span className="text-red-400">Abgebrochen</span>
+                </Button>
               </CardFooter>
             </Card>
 
@@ -185,10 +182,10 @@ const Servers = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 glow-text text-center">Server Impressionen</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <img src="/lovable-uploads/3b9a358c-978d-448c-bcf9-f9423ecbf123.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
-            <img src="/lovable-uploads/21088e98-dffc-4a09-9444-4de28c805478.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
-            <img src="/lovable-uploads/f05e2558-4559-4e9e-8c77-ec8ca08f2e5b.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
-            <img src="/lovable-uploads/e6f089f2-3c23-4217-8bc5-d2b116ccb2aa.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover" />
+            <img src="/lovable-uploads/3b9a358c-978d-448c-bcf9-f9423ecbf123.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
+            <img src="/lovable-uploads/21088e98-dffc-4a09-9444-4de28c805478.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
+            <img src="/lovable-uploads/f05e2558-4559-4e9e-8c77-ec8ca08f2e5b.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
+            <img src="/lovable-uploads/e6f089f2-3c23-4217-8bc5-d2b116ccb2aa.png" alt="Minecraft Scene" className="rounded-lg hover:scale-105 transition-all duration-300 w-full h-48 object-cover brightness-110" />
           </div>
         </div>
       </section>
