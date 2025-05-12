@@ -62,36 +62,6 @@ const Support = () => {
                 </CardContent>
               </Card>
             </div>
-            
-            {/* FAQ Section */}
-            <div className="mt-16">
-              <h2 className="text-3xl font-bold mb-8 glow-text text-center">Häufige Fragen</h2>
-              <div className="glass-panel p-6 text-center mb-6">
-                <p className="text-xl text-gray-300 italic">Kommt noch / ist in Arbeit</p>
-              </div>
-              <div className="space-y-6">
-                <div className="glass-panel p-6">
-                  <h3 className="text-xl font-semibold mb-2 glow-text">Wie kann ich dem Server beitreten?</h3>
-                  <p className="text-gray-400">
-                    Du kannst unserem Server über die IP luxmc.net beitreten. Stelle sicher, dass du die richtige Minecraft-Version verwendest.
-                  </p>
-                </div>
-                
-                <div className="glass-panel p-6">
-                  <h3 className="text-xl font-semibold mb-2 glow-text">Welche Regeln gelten auf dem Server?</h3>
-                  <p className="text-gray-400">
-                    Alle Serverregeln findest du auf unserem Discord-Server sowie beim Spieleinstieg. Die wichtigsten Regeln sind Respekt gegenüber anderen Spielern und kein Cheaten.
-                  </p>
-                </div>
-                
-                <div className="glass-panel p-6">
-                  <h3 className="text-xl font-semibold mb-2 glow-text">Wie kann ich dem Team beitreten?</h3>
-                  <p className="text-gray-400">
-                    Informationen zur Bewerbung für das Team findest du auf unserer "Über uns"-Seite oder in unserem Discord-Server.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
