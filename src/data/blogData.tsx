@@ -59,36 +59,6 @@ export const blogPosts: BlogPost[] = [
       </>
     ),
     image: "/lovable-uploads/7f885c6e-53f8-4bb1-bd33-57912c486531.png"
-  },
-  {
-    id: 2,
-    title: "Aktuelle Updates",
-    excerpt: "Was ist neu auf unserem Server? Alle aktuellen Updates im Überblick.",
-    date: "01.06.2024",
-    author: "LuxMC Team",
-    slug: "aktuelle-updates",
-    content: (
-      <>
-        <p className="mb-4">
-          Mit unserem neuesten Update haben wir einige spannende Neuerungen eingeführt, die das Spielerlebnis auf LuxMC noch besser machen.
-        </p>
-        <h3 className="text-xl font-bold mb-2 glow-text">Neue Spielmodi</h3>
-        <p className="mb-4">
-          Wir haben zwei neue Spielmodi hinzugefügt: Survival+ und Creative Premium. 
-          In Survival+ findet ihr verbesserte Spawner und neue Herausforderungen, während Creative Premium 
-          euch mehr Bauwerkzeuge und Freiheiten bietet.
-        </p>
-        <h3 className="text-xl font-bold mb-2 glow-text">Verbesserte Performance</h3>
-        <p className="mb-4">
-          Wir haben außerdem stark an der Performance des Servers gearbeitet. Durch Optimierungen 
-          und ein Server-Upgrade konnten wir die Latenz reduzieren und ein flüssigeres Spielerlebnis schaffen.
-        </p>
-        <p>
-          Alle Details zu den Updates findet ihr in unserem Discord-Server. Wir freuen uns auf euer Feedback!
-        </p>
-      </>
-    ),
-    image: "/lovable-uploads/73971882-5e2f-4bf9-a85b-4296879189c4.png"
   }
 ];
 
