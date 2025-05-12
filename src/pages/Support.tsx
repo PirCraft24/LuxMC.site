@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Discord, Mail } from 'lucide-react';
+import { MessageCircle, Mail } from 'lucide-react';
 
 const Support = () => {
   return (
@@ -28,7 +28,7 @@ const Support = () => {
               <Card className="bg-black/80 border border-white/10 overflow-hidden">
                 <CardContent className="p-8 flex flex-col items-center text-center">
                   <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center mb-6">
-                    <Discord className="h-8 w-8 text-accent" />
+                    <MessageCircle className="h-8 w-8 text-accent" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 glow-text">Discord Support</h3>
                   <p className="text-gray-300 mb-6">
@@ -36,7 +36,7 @@ const Support = () => {
                   </p>
                   <a href="https://discord.gg/vwm5Mv93Ye" target="_blank" rel="noopener noreferrer">
                     <Button className="bg-white/10 backdrop-blur hover:bg-white/20 border border-white/20">
-                      <Discord className="mr-2 h-4 w-4" />
+                      <MessageCircle className="mr-2 h-4 w-4" />
                       <span className="glow-text">Discord beitreten</span>
                     </Button>
                   </a>
