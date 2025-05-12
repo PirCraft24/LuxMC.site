@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Servers from "./pages/Servers";
 import Discord from "./pages/Discord";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Support from "./pages/Support";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
@@ -34,6 +35,7 @@ const App = () => (
               <Route path="/servers" element={<Servers />} />
               <Route path="/discord" element={<Discord />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:id" element={<BlogPost />} />
               <Route path="/support" element={<Support />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
