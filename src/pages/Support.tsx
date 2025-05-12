@@ -66,6 +66,9 @@ const Support = () => {
             {/* FAQ Section */}
             <div className="mt-16">
               <h2 className="text-3xl font-bold mb-8 glow-text text-center">Häufige Fragen</h2>
+              <div className="glass-panel p-6 text-center mb-6">
+                <p className="text-xl text-gray-300 italic">Kommt noch / ist in Arbeit</p>
+              </div>
               <div className="space-y-6">
                 <div className="glass-panel p-6">
                   <h3 className="text-xl font-semibold mb-2 glow-text">Wie kann ich dem Server beitreten?</h3>
