@@ -29,6 +29,8 @@ const Footer = () => {
                 <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">Über uns</Link></li>
                 <li><Link to="/servers" className="text-gray-400 hover:text-white transition-colors">Server</Link></li>
+                <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
+                <li><Link to="/support" className="text-gray-400 hover:text-white transition-colors">Support</Link></li>
                 <li><Link to="/discord" className="text-gray-400 hover:text-white transition-colors">Discord</Link></li>
               </ul>
             </div>
@@ -44,9 +46,10 @@ const Footer = () => {
             </div>
             
             <div>
-              <h3 className="text-white font-semibold mb-4">Social</h3>
+              <h3 className="text-white font-semibold mb-4">Kontakt</h3>
               <ul className="space-y-2">
                 <li><a href="https://discord.gg/vwm5Mv93Ye" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Discord</a></li>
+                <li><a href="mailto:luxmc2024@gmail.com" className="text-gray-400 hover:text-white transition-colors">E-Mail</a></li>
               </ul>
             </div>
           </div>

@@ -9,6 +9,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Servers from "./pages/Servers";
 import Discord from "./pages/Discord";
+import Blog from "./pages/Blog";
+import Support from "./pages/Support";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -31,6 +33,8 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/servers" element={<Servers />} />
               <Route path="/discord" element={<Discord />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/support" element={<Support />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

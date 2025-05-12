@@ -24,7 +24,7 @@ const Navbar = () => {
             <span>LuxMC</span>
           </Link>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link to="/" className="glow-text hover:opacity-80 transition-opacity flex items-center gap-1">
               <Sparkles className="h-4 w-4" />
               Home
@@ -36,6 +36,14 @@ const Navbar = () => {
             <Link to="/servers" className="glow-text hover:opacity-80 transition-opacity flex items-center gap-1">
               <Sparkles className="h-4 w-4" />
               Server
+            </Link>
+            <Link to="/blog" className="glow-text hover:opacity-80 transition-opacity flex items-center gap-1">
+              <Sparkles className="h-4 w-4" />
+              Blog
+            </Link>
+            <Link to="/support" className="glow-text hover:opacity-80 transition-opacity flex items-center gap-1">
+              <Sparkles className="h-4 w-4" />
+              Support
             </Link>
             <Link to="/discord" className="glow-text hover:opacity-80 transition-opacity flex items-center gap-1">
               <Sparkles className="h-4 w-4" />
@@ -78,6 +86,22 @@ const Navbar = () => {
               >
                 <Sparkles className="h-4 w-4" />
                 Server
+              </Link>
+              <Link 
+                to="/blog" 
+                className="glow-text hover:opacity-80 transition-opacity py-2 flex items-center gap-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Sparkles className="h-4 w-4" />
+                Blog
+              </Link>
+              <Link 
+                to="/support" 
+                className="glow-text hover:opacity-80 transition-opacity py-2 flex items-center gap-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Sparkles className="h-4 w-4" />
+                Support
               </Link>
               <Link 
                 to="/discord" 
