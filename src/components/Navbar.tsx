@@ -37,6 +37,10 @@ const Navbar = () => {
               <Sparkles className="h-4 w-4" />
               Server
             </Link>
+            <Link to="/videos" className="glow-text hover:opacity-80 transition-opacity flex items-center gap-1">
+              <Sparkles className="h-4 w-4" />
+              Videos
+            </Link>
             <Link to="/blog" className="glow-text hover:opacity-80 transition-opacity flex items-center gap-1">
               <Sparkles className="h-4 w-4" />
               Blog
@@ -86,6 +90,14 @@ const Navbar = () => {
               >
                 <Sparkles className="h-4 w-4" />
                 Server
+              </Link>
+              <Link 
+                to="/videos" 
+                className="glow-text hover:opacity-80 transition-opacity py-2 flex items-center gap-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Sparkles className="h-4 w-4" />
+                Videos
               </Link>
               <Link 
                 to="/blog" 

@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { ArrowRight, Sparkles, Diamond } from 'lucide-react';
+import { ArrowRight, Sparkles, Diamond, Video } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -101,6 +100,47 @@ const Home = () => {
               <p className="text-gray-400">
                 Werde Teil einer freundlichen und hilfsbereiten Community von Minecraft-Spielern.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Videos Highlight Section */}
+      <section className="py-16 bg-black relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/90"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 glow-text">Video Tutorials & Trailer</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Schau dir unsere neuesten Tutorials und Trailer an, um mehr über unsere Server zu erfahren.
+            </p>
+          </div>
+          
+          <div className="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-6 md:space-y-0">
+            <div className="glass-panel p-6 flex flex-col items-center text-center max-w-sm hover:scale-105 transition-transform">
+              <Video className="h-12 w-12 text-accent mb-4" />
+              <h3 className="text-xl font-semibold mb-2 glow-text">Server Tutorials</h3>
+              <p className="text-gray-400 mb-4">
+                Lerne, wie du auf unseren Servern spielen kannst mit hilfreichen Anleitungen.
+              </p>
+              <Link to="/videos">
+                <Button variant="outline" className="border border-white/20 hover:bg-white/10">
+                  <span className="glow-text">Tutorials ansehen</span>
+                </Button>
+              </Link>
+            </div>
+            
+            <div className="glass-panel p-6 flex flex-col items-center text-center max-w-sm hover:scale-105 transition-transform">
+              <Video className="h-12 w-12 text-accent mb-4" />
+              <h3 className="text-xl font-semibold mb-2 glow-text">Server Trailer</h3>
+              <p className="text-gray-400 mb-4">
+                Entdecke unsere Server in dynamischen Trailern und erfahre, was dich erwartet.
+              </p>
+              <Link to="/videos">
+                <Button variant="outline" className="border border-white/20 hover:bg-white/10">
+                  <span className="glow-text">Trailer ansehen</span>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
