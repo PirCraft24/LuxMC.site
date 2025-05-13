@@ -5,9 +5,10 @@ const AnimatedBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [position, setPosition] = useState({ x: -300, y: 100 });
   
-  // Animation effect
+  // Animation effect - only appears once
   useEffect(() => {
-    const showBanner = () => {
+    // Initial delay before appearance
+    const timer = setTimeout(() => {
       setIsVisible(true);
       
       // Create "magical" jittery movement
@@ -23,17 +24,9 @@ const AnimatedBanner = () => {
         clearInterval(jitterInterval);
         setIsVisible(false);
       }, 5000);
-    };
-    
-    // Initial delay before first appearance
-    setTimeout(() => {
-      showBanner();
-      
-      // Show banner every 10 seconds
-      const intervalId = setInterval(showBanner, 10000);
-      
-      return () => clearInterval(intervalId);
     }, 2000);
+    
+    return () => clearTimeout(timer);
   }, []);
   
   if (!isVisible) return null;
@@ -48,21 +41,21 @@ const AnimatedBanner = () => {
         filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.5))'
       }}
     >
-      <div className="bg-gradient-to-r from-black/80 to-black/90 p-4 rounded-lg border border-white/20 backdrop-blur-md w-64">
+      <div className="bg-gradient-to-r from-black/80 to-black/90 p-3 rounded-lg border border-white/20 backdrop-blur-md w-48">
         <div className="flex flex-col items-center">
-          <div className="w-16 h-16 mb-3 animate-bounce">
+          <div className="w-10 h-10 mb-2 animate-bounce">
             <img 
               src="/lovable-uploads/3b9a358c-978d-448c-bcf9-f9423ecbf123.png" 
               alt="LuxMC Logo" 
               className="w-full h-full object-contain" 
             />
           </div>
-          <h3 className="text-lg font-bold mb-2 glow-text">LuxMC</h3>
-          <p className="text-sm text-center text-white mb-2">
-            Der beste Minecraft Server für dein Gaming-Erlebnis!
+          <h3 className="text-sm font-bold mb-1 glow-text">LuxMC</h3>
+          <p className="text-xs text-center text-white mb-1">
+            Der beste Minecraft Server!
           </p>
           <div className="text-accent text-xs animate-pulse">
-            Jetzt beitreten: play.luxmc.net
+            play.luxmc.net
           </div>
         </div>
       </div>

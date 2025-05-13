@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Servers from "./pages/Servers";
+import Videos from "./pages/Videos";
 import Discord from "./pages/Discord";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -35,6 +36,7 @@ const App = () => (
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/servers" element={<Servers />} />
+              <Route path="/videos" element={<Videos />} />
               <Route path="/discord" element={<Discord />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:id" element={<BlogPost />} />
