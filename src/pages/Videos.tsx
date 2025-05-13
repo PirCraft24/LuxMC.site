@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Film, Youtube } from 'lucide-react';
 
 interface VideoItem {
   id: string;
@@ -39,9 +40,10 @@ const videoData: VideoItem[] = [
 const Videos = () => {
   return (
     <div className="pt-20 min-h-screen">
-      {/* Hero Section */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4 text-center">
+      {/* Hero Section with Gradient Background */}
+      <section className="py-20 bg-gradient-to-b from-black to-black/95 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/ecf35f30-076e-41b5-b3d6-2a82e618b65b.png')] bg-center opacity-5"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 glow-text">Unsere Videos</h1>
           <div className="w-24 h-1 bg-accent mx-auto mb-10"></div>
           <p className="text-xl max-w-3xl mx-auto text-gray-300">
@@ -55,10 +57,13 @@ const Videos = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             {/* Trailer Section */}
-            <h2 className="text-3xl font-bold mb-8 glow-text">Server Trailer</h2>
+            <div className="flex items-center mb-8">
+              <Film className="text-accent mr-3" />
+              <h2 className="text-3xl font-bold glow-text">Server Trailer</h2>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {videoData.filter(video => video.type === 'trailer').map(video => (
-                <div key={video.id} className="glass-panel overflow-hidden">
+                <div key={video.id} className="glass-panel overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(255,59,48,0.3)]">
                   <div className="w-full">
                     <AspectRatio ratio={16/9}>
                       <iframe 
@@ -72,8 +77,8 @@ const Videos = () => {
                       ></iframe>
                     </AspectRatio>
                   </div>
-                  <div className="p-4">
-                    <h3 className="text-xl font-bold mb-2 glow-text">{video.title}</h3>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold mb-3 glow-text">{video.title}</h3>
                     <p className="text-gray-300 text-sm">{video.description}</p>
                   </div>
                 </div>
@@ -81,10 +86,13 @@ const Videos = () => {
             </div>
             
             {/* Tutorials Section */}
-            <h2 className="text-3xl font-bold mb-8 glow-text">Tutorials</h2>
+            <div className="flex items-center mb-8">
+              <Youtube className="text-accent mr-3" />
+              <h2 className="text-3xl font-bold glow-text">Tutorials</h2>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {videoData.filter(video => video.type === 'tutorial').map(video => (
-                <div key={video.id} className="glass-panel overflow-hidden">
+                <div key={video.id} className="glass-panel overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(255,59,48,0.3)]">
                   <div className="w-full">
                     <AspectRatio ratio={16/9}>
                       <iframe 
@@ -98,8 +106,8 @@ const Videos = () => {
                       ></iframe>
                     </AspectRatio>
                   </div>
-                  <div className="p-4">
-                    <h3 className="text-xl font-bold mb-2 glow-text">{video.title}</h3>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold mb-3 glow-text">{video.title}</h3>
                     <p className="text-gray-300 text-sm">{video.description}</p>
                   </div>
                 </div>
@@ -109,16 +117,21 @@ const Videos = () => {
         </div>
       </section>
       
-      {/* Community Videos CTA */}
-      <section className="py-16 bg-black">
+      {/* Community Videos CTA with improved design */}
+      <section className="py-16 bg-gradient-to-t from-black/80 to-black">
         <div className="container mx-auto px-4 text-center">
-          <div className="glass-panel p-8 max-w-3xl mx-auto">
+          <div className="glass-panel p-8 max-w-3xl mx-auto border border-accent/20 bg-gradient-to-br from-black/90 to-black/70">
             <h2 className="text-2xl font-bold mb-4 glow-text">Dein Video hier?</h2>
             <p className="text-gray-300 mb-6">
               Hast du ein eigenes Video zu unseren Servern erstellt? Wir freuen uns über deine Kreationen!
               Teile dein Video mit uns auf Discord, und vielleicht wird es hier mit aufgenommen.
             </p>
-            <a href="https://discord.gg/vwm5Mv93Ye" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-accent hover:text-white transition-colors">
+            <a 
+              href="https://discord.gg/vwm5Mv93Ye" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center bg-accent/20 hover:bg-accent/30 text-accent hover:text-white transition-all px-6 py-3 rounded-full border border-accent/40"
+            >
               <span className="glow-text">Zum Discord</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
