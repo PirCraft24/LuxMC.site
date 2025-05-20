@@ -15,7 +15,6 @@ import Support from "./pages/Support";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import AnimatedBanner from "./components/AnimatedBanner";
 
 import "./App.css";
 
@@ -29,7 +28,6 @@ const App = () => (
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          <AnimatedBanner />
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />

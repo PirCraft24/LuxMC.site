@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Sparkles } from 'lucide-react';
@@ -29,6 +28,12 @@ const About = () => {
       name: "SenseiJules", 
       role: "Team Mitglied", 
       description: "Experte für Server-Management und Spielerentwicklung im LuxMC-Team."
+    },
+    { 
+      name: "NoTimeToFear", 
+      role: "Content Creator", 
+      description: "Content Creator auf Lux-MC. Macht hauptsächlich Videos und Livestreams auf Youtube über den Server.",
+      avatar: "/lovable-uploads/0230713a-5adc-4c3d-ab87-25f6f787f965.png"
     }
   ];
 
