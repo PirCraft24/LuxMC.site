@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Sparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import AuthNavbar from './AuthNavbar';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,9 +50,7 @@ const Navbar = () => {
               <Sparkles className="h-4 w-4" />
               Discord
             </Link>
-            <Button variant="outline" className="border border-white/20 hover:bg-white/10">
-              <span className="glow-text">Join Us</span>
-            </Button>
+            <AuthNavbar />
           </div>
           
           <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
@@ -111,9 +110,9 @@ const Navbar = () => {
                 <Sparkles className="h-4 w-4" />
                 Discord
               </Link>
-              <Button variant="outline" className="border border-white/20 hover:bg-white/10 w-full">
-                <span className="glow-text">Join Us</span>
-              </Button>
+              <div className="pt-2 border-t border-white/10">
+                <AuthNavbar />
+              </div>
             </div>
           </div>
         )}
