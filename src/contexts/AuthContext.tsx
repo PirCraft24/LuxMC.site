@@ -1,11 +1,17 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
 
+// Check if Supabase environment variables are available
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const hasSupabaseConfig = supabaseUrl && supabaseAnonKey;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Only import and create Supabase client if config is available
+let supabase: any = null;
+if (hasSupabaseConfig) {
+  const { createClient } = await import('@supabase/supabase-js');
+  supabase = createClient(supabaseUrl, supabaseAnonKey);
+}
 
 interface User {
   id: string;
@@ -40,47 +46,94 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user as User || null);
-      setLoading(false);
-    });
+    if (hasSupabaseConfig && supabase) {
+      // Real Supabase authentication
+      supabase.auth.getSession().then(({ data: { session } }: any) => {
+        setUser(session?.user as User || null);
+        setLoading(false);
+      });
 
-    // Listen for auth changes
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user as User || null);
-      setLoading(false);
-    });
+      const {
+        data: { subscription },
+      } = supabase.auth.onAuthStateChange((_event: any, session: any) => {
+        setUser(session?.user as User || null);
+        setLoading(false);
+      });
 
-    return () => subscription.unsubscribe();
+      return () => subscription.unsubscribe();
+    } else {
+      // Demo mode - check localStorage for demo user
+      const demoUser = localStorage.getItem('demoUser');
+      if (demoUser) {
+        setUser(JSON.parse(demoUser));
+      }
+      setLoading(false);
+    }
   }, []);
 
   const signUp = async (email: string, password: string, username: string) => {
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: {
-          username,
-          is_admin: false,
+    if (hasSupabaseConfig && supabase) {
+      // Real Supabase signup
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            username,
+            is_admin: false,
+          },
         },
-      },
-    });
-    return { data, error };
+      });
+      return { data, error };
+    } else {
+      // Demo signup
+      const demoUser: User = {
+        id: Math.random().toString(36).substr(2, 9),
+        email,
+        user_metadata: {
+          username,
+          is_admin: email === 'admin@luxmc.de'
+        }
+      };
+      localStorage.setItem('demoUser', JSON.stringify(demoUser));
+      setUser(demoUser);
+      return { data: { user: demoUser }, error: null };
+    }
   };
 
   const signIn = async (email: string, password: string) => {
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-    return { data, error };
+    if (hasSupabaseConfig && supabase) {
+      // Real Supabase signin
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+      return { data, error };
+    } else {
+      // Demo signin - accept any password for demo purposes
+      const demoUser: User = {
+        id: Math.random().toString(36).substr(2, 9),
+        email,
+        user_metadata: {
+          username: email.split('@')[0],
+          is_admin: email === 'admin@luxmc.de'
+        }
+      };
+      localStorage.setItem('demoUser', JSON.stringify(demoUser));
+      setUser(demoUser);
+      return { data: { user: demoUser }, error: null };
+    }
   };
 
   const signOut = async () => {
-    await supabase.auth.signOut();
+    if (hasSupabaseConfig && supabase) {
+      // Real Supabase signout
+      await supabase.auth.signOut();
+    } else {
+      // Demo signout
+      localStorage.removeItem('demoUser');
+      setUser(null);
+    }
   };
 
   const isAdmin = user?.user_metadata?.is_admin || false;
@@ -96,3 +149,5 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
+
+export { supabase };
