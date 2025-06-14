@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { ArrowRight, Sparkles, Diamond } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import LuxEconomyBanner from '@/components/LuxEconomyBanner';
 
 const Home = () => {
   return (
@@ -43,6 +43,9 @@ const Home = () => {
           <ArrowRight className="h-8 w-8 transform rotate-90 text-white/70" />
         </div>
       </section>
+      
+      {/* LuxEconomy Promotional Banner */}
+      <LuxEconomyBanner />
       
       {/* About Section */}
       <section className="py-24 bg-black">
