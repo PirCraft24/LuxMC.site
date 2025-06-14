@@ -7,6 +7,9 @@ import LuxEconomyBanner from '@/components/LuxEconomyBanner';
 const Home = () => {
   return (
     <div className="flex flex-col min-h-screen">
+      {/* LuxEconomy Promotional Banner - First thing users see */}
+      <LuxEconomyBanner />
+      
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('/lovable-uploads/30c1624d-e93b-4e0d-8a08-a8f3581a716f.png')] bg-cover bg-center opacity-40" />
@@ -43,9 +46,6 @@ const Home = () => {
           <ArrowRight className="h-8 w-8 transform rotate-90 text-white/70" />
         </div>
       </section>
-      
-      {/* LuxEconomy Promotional Banner */}
-      <LuxEconomyBanner />
       
       {/* About Section */}
       <section className="py-24 bg-black">
